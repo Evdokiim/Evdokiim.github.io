@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Задание 7</title>
+<style>
+.demo-box{
+    width: 180px;
+    min-height: 120px;
+    margin: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+}
+.wrapper{
+    position: relative;
+    height: 350px;
+    margin-bottom: 40px;
+}
+.box-static{
+    position: static;
+    background: #cce5ff;
+}
+.box-relative{
+    position: relative;
+    top: 30px;
+    left: 30px;
+    background: #d4edda;
+}
+.box-absolute{
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    background: #f8d7da;
+    z-index: 5;
+}
+.box-fixed{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff3cd;
+    width: 160px;
+}
+.layer-area{
+    position: relative;
+    height: 200px;
+}
+.layer{
+    position: absolute;
+    width: 160px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+.l1{ background:#ff9999; top:20px; left:40px; z-index:1;}
+.l2{ background:#99ff99; top:50px; left:90px; z-index:3;}
+.l3{ background:#9999ff; top:80px; left:140px; z-index:2;}
+.responsive-text{
+    font-size: clamp(18px, 3vw, 36px);
+    text-align: center;
+    margin: 30px 0;
+}
+.flex-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.flex-card{
+    background: #17a2b8;
+    color: white;
+    padding: 20px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+.layout-grid{
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 80px 120px 80px;
+    gap: 10px;
+}
+.cell{
+    background: #6c757d;
+    color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.cell.big{
+    grid-column: 2 / 4;
+}
+.cell.tall{
+    grid-row: 1 / 3;
+}
+.scroll-box{
+    width: 220px;
+    height: 90px;
+    overflow: auto;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+<h2>Position</h2>
+<div class="wrapper">
+    <div class="demo-box box-static">static</div>
+    <div class="demo-box box-relative">relative</div>
+    <div class="demo-box box-absolute">absolute</div>
+</div>
+<div class="demo-box box-fixed">fixed</div>
+<h2>Z-index</h2>
+<div class="layer-area">
+    <div class="layer l1">1</div>
+    <div class="layer l2">2</div>
+    <div class="layer l3">3</div>
+</div>
+<h2>Flexbox</h2>
+<div class="flex-wrap">
+    <div class="flex-card">1</div>
+    <div class="flex-card">2</div>
+    <div class="flex-card">3</div>
+    <div class="flex-card">4</div>
+</div>
+<h2>Grid</h2>
+<div class="layout-grid">
+    <div class="cell">1</div>
+    <div class="cell big">2</div>
+    <div class="cell">3</div>
+    <div class="cell tall">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+</div>
+<h2>Overflow</h2>
+<div class="scroll-box">
+аааааааааааааааааа
+аааааааааааааааааа
+аааааааааааааааааа
+аааааааааааааааааа
+аааааааааааааааааа
+аааааааааааааааааа
+</div>
+</body>
+</html>
