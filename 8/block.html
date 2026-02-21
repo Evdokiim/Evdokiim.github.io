@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блочная верстка</title>
+<style>
+.container{
+    width: 90%;
+    margin: auto;
+}
+.header, .footer{
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+.main{
+    display: flex;
+}
+.menu{
+    width: 30%;
+    background: #ddd;
+    padding: 20px;
+}
+.content{
+    width: 70%;
+    padding: 20px;
+}
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+    }
+    .menu, .content{
+        width:100%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">Top</div>
+<div class="main">
+<div class="menu">menu</div>
+<div class="content">content</div>
+</div>
+<div class="footer">footer</div>
+</div>
+</body>
+</html>
