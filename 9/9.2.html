@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9.2</title>
+<style>
+.container{
+    display:flex;
+    gap:30px;
+    margin:100px;
+}
+.box{
+    width:80px;
+    height:80px;
+}
+.r1{
+    background:green;
+    animation: rot 2s infinite linear;
+}
+.r2{
+    background:blue;
+    animation: sc 1.5s infinite alternate;
+}
+.r3{
+    background:purple;
+    animation: sk 1s infinite alternate;
+}
+.r4{
+    background:orange;
+    animation: mv 2s infinite;
+}
+.r5{
+    background:black;
+    transition: transform 0.5s, background 0.5s;
+}
+.r5:hover{
+    transform: scale(1.3) rotate(45deg);
+    background:red;
+}
+@keyframes rot{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+@keyframes sc{
+    from{ transform: scale(1); }
+    to{ transform: scale(0.5); }
+}
+@keyframes sk{
+    from{ transform: skew(20deg,0); }
+    to{ transform: skew(-20deg,0); }
+}
+@keyframes mv{
+    0%{ transform: translateX(0); }
+    50%{ transform: translateX(100px); }
+    100%{ transform: translateX(0); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box r1"></div>
+    <div class="box r2"></div>
+    <div class="box r3"></div>
+    <div class="box r4"></div>
+    <div class="box r5"></div>
+</div>
+</body>
+</html>
