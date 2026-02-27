@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Навигация и слайдер</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+}
+nav{
+    background:#222;
+    position:relative;
+    z-index:1000;
+}
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+nav li{
+    position:relative;
+}
+nav a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+}
+nav a:hover{
+    background:#444;
+}
+.dropdown{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#333;
+    min-width:150px;
+}
+nav li:hover .dropdown{
+    display:block;
+}
+.menu-btn{
+    padding:10px 15px;
+    background:#444;
+    color:white;
+    cursor:pointer;
+}
+.sidebar{
+    position:fixed;
+    top:50px;
+    left:0;
+    width:250px;
+    height:100%;
+    background:#111;
+    transform:translateX(-100%);
+    transition:0.4s;
+    z-index:999;
+}
+.sidebar a{
+    display:block;
+    padding:15px;
+    color:white;
+    text-decoration:none;
+}
+.sidebar a:hover{
+    background:#333;
+}
+.sidebar.active{
+    transform:translateX(0);
+}
+.close-btn{
+    display:block;
+    top: 0; left: -250px;
+    text-align:center;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    font-size: 3em;
+    cursor:pointer;
+    color:rgb(255, 255, 255);
+    background:rgb(124, 124, 124);
+}
+.slider{
+    width:400px;
+    height:200px;
+    overflow:hidden;
+    margin:50px auto;
+    border:2px solid black;
+}
+.slides{
+    display:flex;
+    width:1200px;
+    animation: slide 9s infinite;
+}
+.slide{
+    width:400px;
+    height:200px;
+    flex-shrink:0;
+}
+.s1{ background:red; }
+.s2{ background:blue; }
+.s3{ background:green; }
+@keyframes slide{
+    0%{ transform:translateX(0); }
+    33%{ transform:translateX(-400px); }
+    66%{ transform:translateX(-800px); }
+    100%{ transform:translateX(0); }
+}
+</style>
+</head>
+<body>
+<div class="menu-btn" onclick="openMenu()">☰ Меню</div>
+<nav>
+<ul>
+    <li><a href="#">Главная</a></li>
+    <li>
+        <a href="#">Услуги</a>
+        <ul class="dropdown">
+            <li><a href="#">Дизайн</a></li>
+            <li><a href="#">Разработка</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Контакты</a></li>
+</ul>
+</nav>
+<div class="sidebar" id="side">
+    <div class="close-btn" onclick="closeMenu()">✖ Закрыть</div>
+    <a href="#">Главная</a>
+    <a href="#">Новости</a>
+    <a href="#">Контакты</a>
+</div>
+<div class="slider">
+    <div class="slides">
+        <div class="slide s1"></div>
+        <div class="slide s2"></div>
+        <div class="slide s3"></div>
+    </div>
+</div>
+<script>
+function openMenu(){
+    document.getElementById("side").classList.add("active");
+}
+function closeMenu(){
+    document.getElementById("side").classList.remove("active");
+}
+</script>
+</body>
+</html>
