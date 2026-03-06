@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .booking-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .booking-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="offers.html">Мероприятия и акции</a></li>
+                <li><a href="book.html">Бронирование</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Бронирование столика</h1>
+        <div class="booking-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Время</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Количество гостей</label>
+                    <select id="guests">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Забронировать</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

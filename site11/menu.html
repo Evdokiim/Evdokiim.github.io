@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .menu-item-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item-card:hover {
+            transform: translateY(-5px);
+        }
+        .menu-item-img {
+            height: 180px;
+            background-color: #ddd; 
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-item-content {
+            padding: 1.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        .menu-item-desc {
+            color: #666;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        .menu-item-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #d32f2f; 
+            border-top: 1px solid #eee;
+            padding-top: 0.8rem;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="offers.html">Мероприятия и акции</a></li>
+                <li><a href="book.html">Бронирование</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Наше меню</h1>
+        <div class="menu-grid">
+            <div class="menu-item-card">
+                <div class="menu-item-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa06S1PdRSn_LSiZpKxnczgGVICxdSaQmHaQ&s');"></div>
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Капучино</h3>
+                    <p class="menu-item-desc">Классический кофе</p>
+                    <div class="menu-item-price">200 ₽</div>
+                </div>
+            </div>
+            <div class="menu-item-card">
+                <div class="menu-item-img" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80');"></div>
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Чизкейк</h3>
+                    <p class="menu-item-desc">Ванильным крем с клубничным соусом</p>
+                    <div class="menu-item-price">250 ₽</div>
+                </div>
+            </div>
+            <div class="menu-item-card">
+                <div class="menu-item-img" style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=1032&q=80');"></div>
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Паста Карбонара</h3>
+                    <p class="menu-item-desc">Спагетти с беконом в сливочном соусе с пармезаном</p>
+                    <div class="menu-item-price">350 ₽</div>
+                </div>
+            </div>
+            <div class="menu-item-card">
+                <div class="menu-item-img" style="background-image: url('https://art-lunch.ru/content/uploads/2018/07/Greek_salad.jpg');"></div>
+                <div class="menu-item-content">
+                    <h3 class="menu-item-title">Греческий салат</h3>
+                    <p class="menu-item-desc">Свежие овощи, сыр фета, маслины и орегано</p>
+                    <div class="menu-item-price">280 ₽</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

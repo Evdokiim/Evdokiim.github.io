@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .offers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .offer-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #d32f2f;
+            transition: box-shadow 0.3s;
+        }
+        .offer-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .offer-title {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .offer-date {
+            font-size: 0.95rem;
+            color: #d32f2f;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: #ffeaea;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+        }
+        .offer-description {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="offers.html">Мероприятия и акции</a></li>
+                <li><a href="book.html">Бронирование</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Мероприятия и акции</h1>
+        <div class="offers-list">
+            <article class="offer-card">
+                <h2 class="offer-title">Новое меню</h2>
+                <div class="offer-date">Действует с 1 апреля</div>
+                <p class="offer-description">
+                    Добавили новые блюда, авторские десерты и напитки
+                </p>
+            </article>
+            <article class="offer-card">
+                <h2 class="offer-title">Живая музыка</h2>
+                <div class="offer-date">Каждую пятницу с 20:00</div>
+                <p class="offer-description">
+                    Выступление живой музыки
+                </p>
+            </article>
+            <article class="offer-card">
+                <h2 class="offer-title">Счастливые часы</h2>
+                <div class="offer-date">Ежедневно с 12:00 до 16:00</div>
+                <p class="offer-description">
+                    Скидка 20% на все напитки и десерты
+                </p>
+            </article>
+        </div>
+    </main>
+</body>
+</html>

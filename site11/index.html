@@ -1,0 +1,103 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .welcome-title {
+            font-size: 3.5rem;
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .welcome-subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+        .nav-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nav-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            width: 220px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #eee;
+        }
+        .nav-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(211, 47, 47, 0.15);
+            border-color: #d32f2f;
+        }
+        .nav-card span {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .nav-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        .nav-card p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+        .welcome-footer {
+            margin-top: 4rem;
+        }
+        .welcome-footer .btn {
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="offers.html">Мероприятия и акции</a></li>
+                <li><a href="book.html">Бронирование</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome-container">
+            <h1 class="welcome-title">Cafe Rome</h1>
+            <div class="nav-cards">
+                <a href="menu.html" class="nav-card">
+                    <h3>Меню</h3>
+                    <p>Изысканные блюда итальянской и европейской кухни</p>
+                </a>
+                <a href="offers.html" class="nav-card">
+                    <h3>Мероприятия</h3>
+                    <p>Живая музыка, тематические вечера и спецпредложения</p>
+                </a>
+                <a href="book.html" class="nav-card">
+                    <h3>Бронирование</h3>
+                    <p>Забронируйте столик для особого вечера</p>
+                </a>
+                <a href="contacts.html" class="nav-card">
+                    <h3>Контакты</h3>
+                    <p>Как нас найти и связаться с нами</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
